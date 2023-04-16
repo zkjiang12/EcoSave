@@ -1,70 +1,25 @@
-# Getting Started with Create React App
+# Vision
+Our goal is to help fight climate change by increasing awareness to our own consumption habits. This idea focuses on actively reducing emissions, instead of reacting to pollution and other environmental issues. By using a chrome extension we display the total money spent in a certain time frame along with the corresponding co2 emissions. This forces the user to aknlowedge their spending habits and vividly see the amount they spent/what they spent it on. Thus we are forced to reckon with our impulsive and wasteful purchases. Now, with their spending habits in mind, some(not all) will be more inclined to reduce their spending. 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+In addition, the co2 emitted will also be paired with equivalent statistics that more vividly display the emissions in understandable terms, co2 emissions coressponding to X number of trees cut down or X number of hours driving a gas powered car. This will heighten awareness of our impact on the environment which will lead to more sustainable purchases and consideration for the environment. 
 
-## Available Scripts
+This saves the user money AND helps the environment. 
 
-In the project directory, you can run:
+In the future, We hope to partner with Amazon and Google among other companies for use on their platform. We plan on displaying the corresponding co2 emissions of each product which will further allow users to make more environmentally friendly decisions.
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Current Stage
+Currently, we have the basic functionality of the chrome extension completed, but have yet begun adapting the UI for different users. This will be added shortly by using firebase authentication and firestore databases. 
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Next we plan on improving the UI and deploying the extension into the chrome store. 
 
-### `npm test`
+After, we plan on increasing the prevision of our co2 calculations by accounting for material properties. 
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Resources Used
+Google Chrome Extension
 
-### `npm run build`
+React
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Firebase
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
