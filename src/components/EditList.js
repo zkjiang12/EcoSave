@@ -1,6 +1,6 @@
 import {React,useState} from 'react'
 import {db} from '../firebase'
-import { collection, deleteDoc, doc } from 'firebase/firestore'
+import {collection, deleteDoc, doc } from 'firebase/firestore'
 import dots from '/Users/zikangjiang/ChromeExtension/app/src/dots.png'
 
 

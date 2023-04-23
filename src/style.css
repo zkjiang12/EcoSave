@@ -1,13 +1,6 @@
-body{
-    color: white;
-}
 
-.popup{
-    background-color: black;
-    padding: 10px;
-    color: white;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    width: 400px;
+body{
+    margin:0px;
 }
 h3{
     margin: 2px;
@@ -15,78 +8,93 @@ h3{
 button{
     cursor: pointer;
 }
-span{
-    color: rgb(240, 240, 240);
-    font-weight: bold;
-}
-.lower--container{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-}
-/* Styling for input container */
-.form{
-    grid-column-start: 1;
-    grid-column-end: 2;
-}
-/* styling for Purchase container */
-.purchase--container{
-    margin-left: 20px;
-    padding: 0px;
-    grid-column-start: 2;
-    grid-column-end: -1;
-}
-/* Styling for Progress Bars */
-.bars--container{
-    margin-top: 10px;
-}
-.progress--container {
-    margin-bottom: 10px;
-    background: rgb(0, 0, 0);
-    height: 30px;
-    width: 100%;
-    align-items: center;
-    border-radius: 25px;
-    border: 2px solid rgb(196, 196, 196); /* Specify border style and color */
-}
-.progress--bar{
-    background: rgb(47,0,0);
-    background: linear-gradient(90deg, rgba(47,0,0,1) 0%, rgba(181,0,0,1) 32%, rgba(244,0,0,1) 100%);
-    height: 100%;
-    border-radius: 25px;  
-    display: flex;
+/* Page1 styling */
+.popup{
+    background-color: white;
+    height: auto;
+    width: 250px;
     justify-content: center;
     align-items: center;
+
+    border: 2px solid ;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
 }
-.progress--bar2{
-    background: rgb(0,47,4);
-    background: linear-gradient(90deg, rgba(0,47,4,1) 0%, rgba(0,181,10,1) 32%, rgba(0,244,215,1) 100%);
-    height: 100%;
-    border-radius: 25px;
+.title {
+    padding: 10px;
     display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 60px;
+    font-size: 32px;
+    font-weight: bolder;
+    color: #210047;
+    text-transform: uppercase; /* Make text uppercase */
+    text-align: center;
+    text-shadow: 4px 4px 4px rgba(15, 0, 23, 0.3); /* Add text shadow */
+}
+
+/* Styling for Containers  */
+.content--container{
+    padding-left:10px ;
+    padding-bottom:10px ;
+    padding-right: 10px;
+    height: auto;
+    border-radius: 30px;
     justify-content: center;
     align-items: center;
+    background-color: white;
 }
-/* Styling for form */
-.form--input{
-    width: 100%;
-    height: 17%;
-    text-indent: 5px;
-    margin-bottom: 5px;
-    border-radius: 12px;
-    border-color: brown;
+.chart--container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    background-color: rgb(255, 255, 255);
+    border-radius: 30px;
+    padding: 20px;
+    box-shadow: 0px 5px 10px rgba(36, 0, 57, 0.576); /* Added shadow */
 }
-.form--button{
-    border-radius: 12px;
-    width: 0%;
-    background-color: black;
-    border: none;
-    color: white;
+.chart--container:hover{
+    background-color:#f7f2ff;
+}
+.open--page2{
+    color:#210047;
     text-decoration: underline;
+    cursor: pointer;
     font-size: 16px;
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+    border-radius: 30px;
+    padding: 20px;
+    box-shadow: 0px 5px 10px rgba(36, 0, 57, 0.576); /* Added shadow */
 }
+.open--page2:hover{
+    background-color:#f7f2ff;
+}
+
+/* /////////////////////////////////////styling for Page 2 */
+.page2{
+    margin-right: 10px;
+    background-color: white;
+    padding: 10px;
+    width: 200px;
+    border-radius: 30px;
+    border: 2px solid ; 
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.close--page2{
+    height: 20px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+
 /* Styling for Purchases */
 .purchase{
     display: flex;
+    font-size: 14px;
 }
 .dots{
     height: 10px;

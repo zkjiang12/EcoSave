@@ -10,6 +10,7 @@ export default function Purchases(props){
             totalcost = totalcost + (+post.cost)
         }
     )
+
     return(
         <div className = 'purchase--container'>
             <h3>Purchases</h3>
@@ -21,6 +22,7 @@ export default function Purchases(props){
             ))}
             <h3>Total Cost : {totalcost.toFixed(4)}</h3>
         </div>
+
     )
 }
 // add show more button once filled

@@ -5,6 +5,10 @@ import Input from './components/Input'
 import {db} from './firebase'
 import {getDocs,collection } from 'firebase/firestore'
 import Access from './components/Access';
+import BarChart from './components/BarChart'
+import x from '/Users/zikangjiang/ChromeExtension/app/src/x.png'
+
+
 
 const Popup = () => {
   // purchases are called posts since I'm reusing old code from another program
@@ -13,6 +17,7 @@ const Popup = () => {
   const [posts,setPosts] = useState([])
   const postsRef = collection(db,"users",'zkjiang12@gmail.com','purchases')
   const [newPost,setNewPost] = useState(false)
+
   
   const querySnapshot = async()=>{
       try{
@@ -33,28 +38,50 @@ const Popup = () => {
           // console.log('running')
   },[newPost])
 
-  return (
-    <div>
-      {loggedIn?
-   
-        <div className = 'popup'>
-          <h1 className='title'>Total Cost of Purchases</h1>
-          <ProgressBar posts = {posts} />
-          <div className='lower--container'>
-            <Input/>
-            <Purchases posts = {posts}/>
-          </div>
-        </div>
-        :
 
-        <div>
-          <h1>Hi</h1>
-          <Access login={loggedIn} setLogin={setLogin}/>
-        </div>
+  let totalcost = 0
+  posts.map((post)=>
+      {
+          totalcost = totalcost + (+post.cost)
       }
-    </div>
+  )
+  const co2_emitted = (totalcost*0.327*0.30)
+  const rounded_co2 = +co2_emitted.toFixed(4)
 
-  );
+  function openPurchase(){
+    setOpenPage(2)
+  }
+  function openHome(){
+    setOpenPage(1)
+  }
+
+
+  const [open,setOpenPage] = useState(1)
+ 
+  if (open==1){
+    return (
+      <div className = 'popup'>
+        <span className='title'>Total Cost</span>
+        <div className='content--container'>
+          <div className='chart--container'>
+            <BarChart totalcost={totalcost} rounded_co2={rounded_co2}/> 
+          </div>
+          <h2 type = 'button' className = 'open--page2' onClick = {openPurchase}>Your Purchases</h2>
+        </div>
+      </div>
+    );
+  }
+
+  if (open==2){
+    return(
+      <div className = 'page2'>
+         <img type = 'button' onClick={openHome} src = {x} className = 'close--page2'/>
+        <Input/>
+        <Purchases posts={posts}/>
+      </div>
+    )      
+  }
+ 
 };
 
 export default Popup;
